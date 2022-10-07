@@ -1,5 +1,5 @@
 //
-//  AddElements+Extension.swift
+//  SearchViewController+Extension.swift
 //  AppleStore
 //
 //  Created by Aleksandr Dorofeev on 06.10.2022.
@@ -45,7 +45,6 @@ extension SearchViewController {
     productView.frame = CGRect(x: frameX, y: 5, width: 130, height: 170)
     productView.layer.cornerRadius = 20
     productView.tag = tagView
-    print(productView.tag)
     productView.backgroundColor = Constants.colorView
   }
   
@@ -93,22 +92,10 @@ extension SearchViewController {
   // MARK: - Private actions.
   @objc private func handleTapAction(sender: UITapGestureRecognizer) {
     let detailVC = DetailViewController()
-    switch sender.view?.tag {
-    case 1:
-      detailVC.nameProductLabel.text = product[0].title
-      detailVC.priceLabel.text = product[0].price
-      detailVC.productImageView.image = UIImage(named: product[0].image)
-    case 2:
-      detailVC.nameProductLabel.text = product[1].title
-      detailVC.priceLabel.text = product[1].price
-      detailVC.productImageView.image = UIImage(named: product[1].image)
-    case 3:
-      detailVC.nameProductLabel.text = product[2].title
-      detailVC.priceLabel.text = product[2].price
-      detailVC.productImageView.image = UIImage(named: product[2].image)
-    default:
-      break
-    }
+    guard let tag = sender.view?.tag else { return }
+    detailVC.nameProductLabel.text = products[tag].title
+    detailVC.productImageView.image = UIImage(named: products[tag].imageName)
+    detailVC.priceLabel.text = products[tag].price
     navigationController?.pushViewController(detailVC, animated: true)
   }
 }

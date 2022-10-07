@@ -16,10 +16,10 @@ final class TabBarViewController: UITabBarController {
     static let forYouTitle = "Для Вас"
     static let searchTitle = "Поиск"
     static let basketTitle = "Корзина"
-    static let buyImage = "laptopcomputer.and.iphone"
-    static let forYouImage = "person.crop.circle"
-    static let searchImage = "magnifyingglass"
-    static let bagImage = "bag"
+    static let buyImageName = "laptopcomputer.and.iphone"
+    static let forYouImageName = "person.crop.circle"
+    static let searchImageName = "magnifyingglass"
+    static let bagImageName = "bag"
     static let tabBarBackgroundColor = UIColor(red: 0.071, green: 0.071, blue: 0.071, alpha: 1)
   }
   
@@ -45,16 +45,16 @@ final class TabBarViewController: UITabBarController {
   private func setupNavigationsToTabBar() {
     viewControllers = [createNavigationControllers(for: BuyViewController(),
                                                    title: Constants.buyTitle,
-                                                   imageName: Constants.buyImage),
+                                                   imageName: Constants.buyImageName),
                        createNavigationControllers(for: ForYouViewController(),
                                                    title: Constants.forYouTitle,
-                                                   imageName: Constants.forYouImage),
+                                                   imageName: Constants.forYouImageName),
                        createNavigationControllers(for: SearchViewController(),
                                                    title: Constants.searchTitle,
-                                                   imageName: Constants.searchImage),
+                                                   imageName: Constants.searchImageName),
                        createNavigationControllers(for: BasketViewController(),
                                                    title: Constants.basketTitle,
-                                                   imageName: Constants.bagImage)]
+                                                   imageName: Constants.bagImageName)]
   }
   
   private func createNavigationControllers(for rootViewController: UIViewController,

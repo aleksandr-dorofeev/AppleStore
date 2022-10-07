@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Basket Screen.
+/// Screen with added products.
 final class BasketViewController: UIViewController {
 
   // MARK: - Life cycle.

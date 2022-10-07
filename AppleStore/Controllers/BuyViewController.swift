@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Buy Screen.
+/// Screen with products.
 final class BuyViewController: UIViewController {
 
   // MARK: - Life cycle.

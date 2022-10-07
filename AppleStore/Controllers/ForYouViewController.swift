@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// For you Screen.
+/// Screen with recomendations.
 final class ForYouViewController: UIViewController {
 
   // MARK: - Life cycle.
