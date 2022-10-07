@@ -9,9 +9,9 @@ import UIKit
 
 /// Screen with added products.
 final class BasketViewController: UIViewController {
-
+  
   // MARK: - Life cycle.
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 }

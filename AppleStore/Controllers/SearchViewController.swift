@@ -23,14 +23,14 @@ final class SearchViewController: UIViewController {
   
   // MARK: - Public properties.
   let products = [Product(title: "Чехол Incase Flat для Macbook Pro 16 дюймов",
-                         imageName: "case",
-                         price: "3 990.00 руб"),
-                 Product(title: "Спортивный ремешок Black Unity (для к...",
-                         imageName: "sportsStrap",
-                         price: "5 679.00 руб"),
-                 Product(title: "Кожаный чехол для Macbook Pro 16 дюймов, золотой",
-                         imageName: "leatherCase",
-                         price: "7 299,00 руб")
+                          imageName: "case",
+                          price: "3 990.00 руб"),
+                  Product(title: "Спортивный ремешок Black Unity (для к...",
+                          imageName: "sportsStrap",
+                          price: "5 679.00 руб"),
+                  Product(title: "Кожаный чехол для Macbook Pro 16 дюймов, золотой",
+                          imageName: "leatherCase",
+                          price: "7 299,00 руб")
   ]
   
   // MARK: - Public properties.

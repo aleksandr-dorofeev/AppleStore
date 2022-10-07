@@ -9,9 +9,9 @@ import UIKit
 
 /// Screen with recomendations.
 final class ForYouViewController: UIViewController {
-
+  
   // MARK: - Life cycle.
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 }

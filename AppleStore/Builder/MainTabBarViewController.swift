@@ -1,5 +1,5 @@
 //
-//  TabBarViewController.swift
+//  MainTabBarViewController.swift
 //  AppleStore
 //
 //  Created by Aleksandr Dorofeev on 06.10.2022.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// Controller.
-final class TabBarViewController: UITabBarController {
+final class MainTabBarViewController: UITabBarController {
   
   // MARK: - Private enum.
   private enum Constants {
