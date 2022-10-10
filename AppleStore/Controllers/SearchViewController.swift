@@ -37,6 +37,8 @@ final class SearchViewController: UIViewController {
   private lazy var iphoneView = UIView()
   private lazy var airPodsView = UIView()
   private lazy var macbookView = UIView()
+  private lazy var productViews: [UIView] = [caseMacbookView, sportsStrapView, leatherCaseView,
+                                             iphoneView, airPodsView, macbookView]
   
   // MARK: - Life cycle.
   override func viewDidLoad() {
@@ -51,12 +53,7 @@ final class SearchViewController: UIViewController {
     createQueryOptionsLabel()
     createClearButton()
     createProductListScrollView()
-    createCaseMacbookView()
-    createSportsStrapView()
-    createLeatherCaseView()
-    createIphoneView()
-    createAirPodsView()
-    createMacbookView()
+    setupProductViews()
     createAirPodsOptionView()
     createAppleCareOptionView()
     createBeatsOptionView()
@@ -96,58 +93,19 @@ final class SearchViewController: UIViewController {
     view.addSubview(clearButton)
   }
   
-  private func createCaseMacbookView() {
-    guard let productIndex = Products.shared.products[safe: 0] else { return }
-    createProductView(productView: caseMacbookView,
-                      tagView: 0,
-                      imageName: productIndex.imageName[0],
-                      productTitle: productIndex.title,
-                      frameX: 0)
-  }
-  
-  private func createSportsStrapView() {
-    guard let productIndex = Products.shared.products[safe: 1] else { return }
-    createProductView(productView: sportsStrapView,
-                      tagView: 1,
-                      imageName: productIndex.imageName[0],
-                      productTitle: productIndex.title,
-                      frameX: 140)
-  }
-  
-  private func createLeatherCaseView() {
-    guard let productIndex = Products.shared.products[safe: 2] else { return }
-    createProductView(productView: leatherCaseView,
-                      tagView: 2,
-                      imageName: productIndex.imageName[0],
-                      productTitle: productIndex.title,
-                      frameX: 280)
-  }
-  
-  private func createIphoneView() {
-    guard let productIndex = Products.shared.products[safe: 3] else { return }
-    createProductView(productView: iphoneView,
-                      tagView: 3,
-                      imageName: productIndex.imageName[0],
-                      productTitle: productIndex.title,
-                      frameX: 420)
-  }
-  
-  private func createAirPodsView() {
-    guard let productIndex = Products.shared.products[safe: 4] else { return }
-    createProductView(productView: airPodsView,
-                      tagView: 4,
-                      imageName: productIndex.imageName[0],
-                      productTitle: productIndex.title,
-                      frameX: 560)
-  }
-  
-  private func createMacbookView() {
-    guard let productIndex = Products.shared.products[safe: 5] else { return }
-    createProductView(productView: macbookView,
-                      tagView: 5,
-                      imageName: productIndex.imageName[0],
-                      productTitle: productIndex.title,
-                      frameX: 700)
+  private func setupProductViews() {
+    var viewTag = 0
+    var frameX = 0
+    for view in productViews {
+      guard let productIndex = Products.shared.products[safe: viewTag] else { return }
+      createProductView(productView: view,
+                        tagView: viewTag,
+                        imageName: productIndex.imageName[safe: 0] ?? "",
+                        productTitle: productIndex.title,
+                        frameX: frameX)
+      viewTag += 1
+      frameX += 140
+    }
   }
   
   private func createAirPodsOptionView() {
