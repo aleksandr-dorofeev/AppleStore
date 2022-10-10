@@ -23,6 +23,7 @@
 		F8EC6E7E28F1812200E5447B /* DetailViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EC6E7D28F1812200E5447B /* DetailViewController+Extension.swift */; };
 		F8EC6E8428F3524F00E5447B /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EC6E8328F3524F00E5447B /* Products.swift */; };
 		F8FA4CED28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA4CEC28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift */; };
+		F8FA4CEF28F42272000F6658 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA4CEE28F42272000F6658 /* Collection+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F8EC6E7D28F1812200E5447B /* DetailViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Extension.swift"; sourceTree = "<group>"; };
 		F8EC6E8328F3524F00E5447B /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		F8FA4CEC28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		F8FA4CEE28F42272000F6658 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F829588E28EF34DD00BA44E0 /* SearchViewController +Extension.swift */,
 				F8EC6E7D28F1812200E5447B /* DetailViewController+Extension.swift */,
 				F8FA4CEC28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift */,
+				F8FA4CEE28F42272000F6658 /* Collection+Extension.swift */,
 				F8EAAD9A28EF6329008EADAC /* View+Extension.swift */,
 			);
 			path = Extensions;
@@ -226,6 +229,7 @@
 				F8EAAD9D28EF6B88008EADAC /* DetailViewController.swift in Sources */,
 				F8EC6E7E28F1812200E5447B /* DetailViewController+Extension.swift in Sources */,
 				F829587328EF10CF00BA44E0 /* MainTabBarViewController.swift in Sources */,
+				F8FA4CEF28F42272000F6658 /* Collection+Extension.swift in Sources */,
 				F829588728EF293700BA44E0 /* BuyViewController.swift in Sources */,
 				F8EAAD9B28EF6329008EADAC /* View+Extension.swift in Sources */,
 				F8EAAD9928EF60AC008EADAC /* Product.swift in Sources */,

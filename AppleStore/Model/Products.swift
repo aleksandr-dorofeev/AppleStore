@@ -31,4 +31,6 @@ final class Products {
                           imageName: ["macbookPro"],
                           price: "123 799,00 руб.")
   ]
+  
+  private init() {}
 }

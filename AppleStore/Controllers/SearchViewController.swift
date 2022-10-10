@@ -97,50 +97,56 @@ final class SearchViewController: UIViewController {
   }
   
   private func createCaseMacbookView() {
+    guard let productIndex = Products.shared.products[safe: 0] else { return }
     createProductView(productView: caseMacbookView,
                       tagView: 0,
-                      imageName: Products.shared.products[0].imageName[0],
-                      productTitle: Products.shared.products[0].title,
+                      imageName: productIndex.imageName[0],
+                      productTitle: productIndex.title,
                       frameX: 0)
   }
   
   private func createSportsStrapView() {
+    guard let productIndex = Products.shared.products[safe: 1] else { return }
     createProductView(productView: sportsStrapView,
                       tagView: 1,
-                      imageName: Products.shared.products[1].imageName[0],
-                      productTitle: Products.shared.products[1].title,
+                      imageName: productIndex.imageName[0],
+                      productTitle: productIndex.title,
                       frameX: 140)
   }
   
   private func createLeatherCaseView() {
+    guard let productIndex = Products.shared.products[safe: 2] else { return }
     createProductView(productView: leatherCaseView,
                       tagView: 2,
-                      imageName: Products.shared.products[2].imageName[0],
-                      productTitle: Products.shared.products[2].title,
+                      imageName: productIndex.imageName[0],
+                      productTitle: productIndex.title,
                       frameX: 280)
   }
   
   private func createIphoneView() {
+    guard let productIndex = Products.shared.products[safe: 3] else { return }
     createProductView(productView: iphoneView,
                       tagView: 3,
-                      imageName: Products.shared.products[3].imageName[0],
-                      productTitle: Products.shared.products[3].title,
+                      imageName: productIndex.imageName[0],
+                      productTitle: productIndex.title,
                       frameX: 420)
   }
   
   private func createAirPodsView() {
+    guard let productIndex = Products.shared.products[safe: 4] else { return }
     createProductView(productView: airPodsView,
                       tagView: 4,
-                      imageName: Products.shared.products[4].imageName[0],
-                      productTitle: Products.shared.products[4].title,
+                      imageName: productIndex.imageName[0],
+                      productTitle: productIndex.title,
                       frameX: 560)
   }
   
   private func createMacbookView() {
+    guard let productIndex = Products.shared.products[safe: 5] else { return }
     createProductView(productView: macbookView,
                       tagView: 5,
-                      imageName: Products.shared.products[5].imageName[0],
-                      productTitle: Products.shared.products[5].title,
+                      imageName: productIndex.imageName[0],
+                      productTitle: productIndex.title,
                       frameX: 700)
   }
   

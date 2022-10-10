@@ -88,6 +88,7 @@ final class DetailViewController: UIViewController {
   }
   
   private func configureNavigationBar(largeTitle: Bool, color: UIColor) {
+    let navBar = navigationController?.navigationBar
     let appearance = UINavigationBarAppearance()
     if largeTitle == true {
       appearance.configureWithTransparentBackground()
@@ -95,10 +96,9 @@ final class DetailViewController: UIViewController {
       appearance.configureWithOpaqueBackground()
     }
     appearance.backgroundColor = color
-    navigationController?.navigationBar.standardAppearance = appearance
-    navigationController?.navigationBar.scrollEdgeAppearance =
-    navigationController?.navigationBar.standardAppearance
-    navigationController?.navigationBar.prefersLargeTitles = largeTitle
+    navBar?.standardAppearance = appearance
+    navBar?.scrollEdgeAppearance = navBar?.standardAppearance
+    navBar?.prefersLargeTitles = largeTitle
   }
   
   private func createScrollViewImages() {
@@ -218,20 +218,14 @@ final class DetailViewController: UIViewController {
     let shareButton = UIButton()
     shareButton.setImage(UIImage(systemName: Constants.share), for: .normal)
     shareButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-    shareButton.addTarget(self, action: #selector(barButtonsActions), for: .touchUpInside)
     let shareItem = UIBarButtonItem()
     shareItem.customView = shareButton
     
     let likeButton = UIButton()
     likeButton.setImage(UIImage(systemName: Constants.heart), for: .normal)
     likeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-    likeButton.addTarget(self, action: #selector(barButtonsActions), for: .touchUpInside)
     let likeItem = UIBarButtonItem()
     likeItem.customView = likeButton
     navigationItem.rightBarButtonItems = [likeItem, shareItem]
-  }
-  
-  // MARK: - Private actions.
-  @objc private func barButtonsActions() {
   }
 }
