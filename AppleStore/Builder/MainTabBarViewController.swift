@@ -20,7 +20,6 @@ final class MainTabBarViewController: UITabBarController {
     static let forYouImageName = "person.crop.circle"
     static let searchImageName = "magnifyingglass"
     static let bagImageName = "bag"
-    static let tabBarBackgroundColor = UIColor(red: 0.071, green: 0.071, blue: 0.071, alpha: 1)
   }
   
   // MARK: - Life cycle.
@@ -38,7 +37,7 @@ final class MainTabBarViewController: UITabBarController {
   private func configureTabBar() {
     view.backgroundColor = .systemBackground
     UITabBar.appearance().barTintColor = .systemBackground
-    UITabBar.appearance().backgroundColor = Constants.tabBarBackgroundColor
+    UITabBar.appearance().backgroundColor = .secondarySystemBackground
     tabBar.tintColor = .systemBlue
   }
   
