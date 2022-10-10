@@ -28,7 +28,7 @@ extension SearchViewController {
     createProductImageView(productView, imageName: imageName)
     createProductLabel(productView, title: productTitle)
     addGestureRecognizer(productView)
-    productListView.addSubview(productView)
+    productListScrollView.addSubview(productView)
   }
   
   func createRequestOptionsView(title: String, frameY: Int) {
@@ -45,7 +45,7 @@ extension SearchViewController {
     productView.frame = CGRect(x: frameX, y: 5, width: 130, height: 170)
     productView.layer.cornerRadius = 20
     productView.tag = tagView
-    productView.backgroundColor = Constants.colorView
+    productView.backgroundColor = .systemGray6
   }
   
   private func createProductImageView(_ view: UIView, imageName: String) {
@@ -67,7 +67,7 @@ extension SearchViewController {
   }
   
   private func createImageViewForRequestOption(_ view: UIView) {
-    let imageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
+    let imageView = UIImageView(image: UIImage(systemName: Constants.searchImageName))
     imageView.frame = CGRect(x: 0, y: 10, width: 20, height: 20)
     imageView.tintColor = .lightGray
     view.addSubview(imageView)
@@ -93,9 +93,9 @@ extension SearchViewController {
   @objc private func handleTapAction(sender: UITapGestureRecognizer) {
     let detailVC = DetailViewController()
     guard let tag = sender.view?.tag else { return }
-    detailVC.nameProductLabel.text = products[tag].title
-    detailVC.productImageView.image = UIImage(named: products[tag].imageName)
-    detailVC.priceLabel.text = products[tag].price
+    detailVC.nameProductLabel.text = Products.shared.products[tag].title
+    detailVC.imageNames = Products.shared.products[tag].imageName
+    detailVC.priceLabel.text = Products.shared.products[tag].price
     navigationController?.pushViewController(detailVC, animated: true)
   }
 }

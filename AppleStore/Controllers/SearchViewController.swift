@@ -18,23 +18,15 @@ final class SearchViewController: UIViewController {
     static let helveticaBoldFont = "HelveticaNeue-Bold"
     static let helveticaFont = "HelveticaNeue"
     static let clearTitle = "Очистить"
-    static let colorView = UIColor(red: 0.071, green: 0.071, blue: 0.071, alpha: 1)
+    static let searchImageName = "magnifyingglass"
+    static let airpodsRequest = "Airpods"
+    static let appleCareRequest = "AppleCare"
+    static let beatsRequest = "Beats"
+    static let compareRequest = "Сравните модели iPhone"
   }
   
   // MARK: - Public properties.
-  let products = [Product(title: "Чехол Incase Flat для Macbook Pro 16 дюймов",
-                          imageName: "case",
-                          price: "3 990.00 руб"),
-                  Product(title: "Спортивный ремешок Black Unity (для к...",
-                          imageName: "sportsStrap",
-                          price: "5 679.00 руб"),
-                  Product(title: "Кожаный чехол для Macbook Pro 16 дюймов, золотой",
-                          imageName: "leatherCase",
-                          price: "7 299,00 руб")
-  ]
-  
-  // MARK: - Public properties.
-  lazy var productListView = UIView()
+  lazy var productListScrollView = UIScrollView()
   
   // MARK: - Private properties.
   private lazy var searchController = UISearchController()
@@ -42,6 +34,11 @@ final class SearchViewController: UIViewController {
   private lazy var caseMacbookView = UIView()
   private lazy var sportsStrapView = UIView()
   private lazy var leatherCaseView = UIView()
+  private lazy var iphoneView = UIView()
+  private lazy var airPodsView = UIView()
+  private lazy var macbookView = UIView()
+  private lazy var productViews: [UIView] = [caseMacbookView, sportsStrapView, leatherCaseView,
+                                             iphoneView, airPodsView, macbookView]
   
   // MARK: - Life cycle.
   override func viewDidLoad() {
@@ -55,10 +52,8 @@ final class SearchViewController: UIViewController {
     createRecentlyProductsLabel()
     createQueryOptionsLabel()
     createClearButton()
-    createProductListView()
-    createCaseMacbookView()
-    createSportsStrapView()
-    createLeatherCaseView()
+    createProductListScrollView()
+    setupProductViews()
     createAirPodsOptionView()
     createAppleCareOptionView()
     createBeatsOptionView()
@@ -80,9 +75,13 @@ final class SearchViewController: UIViewController {
     createTitleToBlocksLabel( title: Constants.queryOptionsTitle, frameY: 440)
   }
   
-  private func createProductListView() {
-    productListView.frame = CGRect(x: 16, y: 235, width: 500, height: 180)
-    view.addSubview(productListView)
+  private func createProductListScrollView() {
+    productListScrollView.frame = CGRect(x: 16, y: 235, width: 500, height: 180)
+    productListScrollView.isPagingEnabled = false
+    productListScrollView.showsHorizontalScrollIndicator = false
+    productListScrollView.contentSize = CGSize(width: productListScrollView.frame.width * 2,
+                                               height: productListScrollView.frame.height)
+    view.addSubview(productListScrollView)
   }
   
   private func createClearButton() {
@@ -94,43 +93,34 @@ final class SearchViewController: UIViewController {
     view.addSubview(clearButton)
   }
   
-  private func createCaseMacbookView() {
-    createProductView(productView: caseMacbookView,
-                      tagView: 0,
-                      imageName: products[0].imageName,
-                      productTitle: products[0].title,
-                      frameX: 0)
-  }
-  
-  private func createSportsStrapView() {
-    createProductView(productView: sportsStrapView,
-                      tagView: 1,
-                      imageName: products[1].imageName,
-                      productTitle: products[1].title,
-                      frameX: 140)
-  }
-  
-  private func createLeatherCaseView() {
-    createProductView(productView: leatherCaseView,
-                      tagView: 2,
-                      imageName: products[2].imageName,
-                      productTitle: products[2].title,
-                      frameX: 280)
+  private func setupProductViews() {
+    var viewTag = 0
+    var frameX = 0
+    for view in productViews {
+      guard let productIndex = Products.shared.products[safe: viewTag] else { return }
+      createProductView(productView: view,
+                        tagView: viewTag,
+                        imageName: productIndex.imageName[safe: 0] ?? "",
+                        productTitle: productIndex.title,
+                        frameX: frameX)
+      viewTag += 1
+      frameX += 140
+    }
   }
   
   private func createAirPodsOptionView() {
-    createRequestOptionsView(title: "Airpods", frameY: 480)
+    createRequestOptionsView(title: Constants.airpodsRequest, frameY: 480)
   }
   
   private func createAppleCareOptionView() {
-    createRequestOptionsView(title: "AppleCare", frameY: 530)
+    createRequestOptionsView(title: Constants.appleCareRequest, frameY: 530)
   }
   
   private func createBeatsOptionView() {
-    createRequestOptionsView(title: "Beats", frameY: 580)
+    createRequestOptionsView(title: Constants.beatsRequest, frameY: 580)
   }
   
   private func createCompareIphoneModelOptionView() {
-    createRequestOptionsView(title: "Сравните модели iPhone", frameY: 630)
+    createRequestOptionsView(title: Constants.compareRequest, frameY: 630)
   }
 }
