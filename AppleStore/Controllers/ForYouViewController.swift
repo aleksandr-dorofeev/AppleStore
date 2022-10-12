@@ -40,13 +40,12 @@ final class ForYouViewController: UIViewController {
   
   // MARK: - Public properties.
   lazy var scrollView = UIScrollView(frame: view.bounds)
-  lazy var deliveryOrderView = UIView()
-  lazy var recommendedView = UIView()
-  lazy var avatarImageView = UIImageView()
+  let deliveryOrderView = UIView()
+  let recommendedView = UIView()
+  let avatarImageView = UIImageView()
   
   // MARK: - Private properties.
-  private lazy var showAllButton = UIButton()
-  private lazy var emptyImageView = UIImageView()
+  private let showAllButton = UIButton()
   
   // MARK: - Life cycle.
   override func viewDidLoad() {
@@ -196,12 +195,6 @@ final class ForYouViewController: UIViewController {
     recommendationDetailsButton.setImage(UIImage(systemName: Constants.shevronImageName), for: .normal)
     recommendationDetailsButton.tintColor = .gray
     recommendedView.addSubview(recommendationDetailsButton)
-  }
-  
-  private func createEmptyImageView() {
-    emptyImageView.frame = CGRect(x: 315, y: 85, width: 50, height: 50)
-    emptyImageView.layer.masksToBounds = true
-    emptyImageView.backgroundColor = .red
   }
   
   private func createAvatarItem() {

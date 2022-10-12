@@ -23,7 +23,7 @@ final class WebViewController: UIViewController {
   // MARK: - Public properties.
   var productUrl: String?
   var absoluteString: String?
-  lazy var progressView = UIProgressView()
+  var progressView = UIProgressView()
   
   // MARK: - Private properties.
   private lazy var webView: WKWebView = {

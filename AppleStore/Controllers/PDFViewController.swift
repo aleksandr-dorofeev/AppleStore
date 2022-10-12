@@ -18,7 +18,7 @@ final class PDFViewController: UIViewController {
   }
   
   // MARK: - Private properties.
-  private lazy var progressView = UIProgressView()
+  private var progressView = UIProgressView()
   private var observation: NSKeyValueObservation?
   private var absoluteString: String?
   
