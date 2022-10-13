@@ -29,7 +29,7 @@ final class WebViewController: UIViewController {
   private lazy var webView: WKWebView = {
     let webConfiguration = WKWebViewConfiguration()
     let webView = WKWebView(frame: .zero, configuration: webConfiguration)
-    guard let url = self.productUrl else { return  webView}
+    guard let url = self.productUrl else { return webView}
     let fullUrl = Constants.baseUrl + url
     if let myURL = URL(string: fullUrl) {
       let myRequest = URLRequest(url: myURL)
@@ -47,11 +47,6 @@ final class WebViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupSubviews()
-  }
-  
-  // MARK: - Deinit for observation.
-  deinit {
-    observation = nil
   }
   
   // MARK: - Private visual components.
@@ -142,8 +137,8 @@ final class WebViewController: UIViewController {
   
   // MARK: - Private actions.
   private func addObserverForProgressAction() {
-    observation = webView.observe(\.estimatedProgress, options: .new) { _, _ in
-      self.progressView.progress = Float(self.webView.estimatedProgress)
+    observation = webView.observe(\.estimatedProgress, options: .new) { [weak self] _, _ in
+      self?.progressView.progress = Float(self?.webView.estimatedProgress ?? 0.1)
     }
   }
   
@@ -166,8 +161,12 @@ final class WebViewController: UIViewController {
   }
   
   @objc private func shareAction() {
-    guard let actualString = absoluteString else { return }
-    guard let urlText = URL(string: actualString) else { return }
+    guard
+      let actualString = absoluteString,
+      let urlText = URL(string: actualString)
+    else {
+      return
+    }
     let activityController = UIActivityViewController(activityItems: [urlText],
                                                       applicationActivities: nil)
     let activity = activityController

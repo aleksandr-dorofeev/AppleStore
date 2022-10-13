@@ -64,6 +64,7 @@ final class ForYouViewController: UIViewController {
     setupTapBarAppearanceOnThisView(style: .unspecified)
   }
   
+  // MARK: - Private methods.
   private func setupSubviews() {
     createScrollView()
     createShowEveryoneButton()
@@ -228,6 +229,7 @@ final class ForYouViewController: UIViewController {
     navigationController?.navigationBar.overrideUserInterfaceStyle = style
   }
   
+  // MARK: - Private actions.
   @objc private func changeAvatarAction() {
     let avatarPickerController = UIImagePickerController()
     avatarPickerController.allowsEditing = true
