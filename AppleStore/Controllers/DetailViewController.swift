@@ -18,6 +18,7 @@ final class DetailViewController: UIViewController {
     static let addTitle = "Добавить в корзину"
     static let checkMarkName = "checkmark.circle.fill"
     static let shipingBoxName = "shippingbox"
+    static let pdfTitle = "Подробнее"
     static let deliveryMessage = """
 Заказ сегодня в течение дня, доставка:
 Чт 25 Фев - Бесплатно
@@ -34,10 +35,12 @@ final class DetailViewController: UIViewController {
   lazy var firstColorButton = makeColorButton(xCoordinate: 145)
   lazy var secondColorButton = makeColorButton(xCoordinate: 205)
   var imageNames: [String] = []
+  var productUrl = String()
   
   // MARK: - Private properties.
   lazy private var imagesScrollView = UIScrollView()
   lazy private var descriptionLabel = UILabel()
+  lazy private var pdfInfoButton = UIButton()
   lazy private var checkMarkImageView = UIImageView()
   lazy private var checkMarkLabel = UILabel()
   lazy private var addButton = UIButton()
@@ -75,6 +78,7 @@ final class DetailViewController: UIViewController {
     createDeliveryImage()
     createDeliveryLabel()
     configureColorButtons()
+    createPDFInfoButton()
   }
   
   private func createBackgroundColor() {
@@ -170,6 +174,19 @@ final class DetailViewController: UIViewController {
     view.addSubview(addButton)
   }
   
+  private func createPDFInfoButton() {
+    pdfInfoButton.frame = CGRect(x: 0, y: 0, width: 140, height: 35)
+    pdfInfoButton.center = view.center
+    pdfInfoButton.setTitle(Constants.pdfTitle, for: .normal)
+    pdfInfoButton.titleLabel?.font = .systemFont(ofSize: 13)
+    pdfInfoButton.setTitleColor(.systemBlue, for: .normal)
+    pdfInfoButton.layer.cornerRadius = 10
+    pdfInfoButton.layer.borderWidth = 1
+    pdfInfoButton.addTarget(self, action: #selector(openPdfAction), for: .touchUpInside)
+    pdfInfoButton.layer.borderColor = UIColor.systemBlue.cgColor
+    view.addSubview(pdfInfoButton)
+  }
+  
   private func createDeliveryView() {
     deliveryView.frame = CGRect(x: 16, y: 670, width: 358, height: 60)
     view.addSubview(deliveryView)
@@ -211,7 +228,15 @@ final class DetailViewController: UIViewController {
     let imageView = UIImageView(frame: CGRect(x: frameX, y: 30, width: 300, height: 125))
     imageView.image = UIImage(named: itemImageName)
     imageView.contentMode = .scaleAspectFit
+    addGestureRecognizerForWebView(imageView)
     imagesScrollView.addSubview(imageView)
+  }
+  
+  private func addGestureRecognizerForWebView(_ productImage: UIImageView) {
+    let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapAction))
+    tap.numberOfTapsRequired = 1
+    productImage.addGestureRecognizer(tap)
+    productImage.isUserInteractionEnabled = true
   }
   
   private func createNavigationItems() {
@@ -227,5 +252,19 @@ final class DetailViewController: UIViewController {
     let likeItem = UIBarButtonItem()
     likeItem.customView = likeButton
     navigationItem.rightBarButtonItems = [likeItem, shareItem]
+  }
+  
+  // MARK: - Private actions.
+  @objc private func handleTapAction(sender: UITapGestureRecognizer) {
+    let webVC = WebViewController()
+    webVC.productUrl = productUrl
+    webVC.modalPresentationStyle = .formSheet
+    present(webVC, animated: true)
+  }
+  
+  @objc private func openPdfAction() {
+    let pdfVC = PDFViewController()
+    pdfVC.modalPresentationStyle = .formSheet
+    present(pdfVC, animated: true)
   }
 }

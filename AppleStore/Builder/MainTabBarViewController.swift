@@ -28,9 +28,13 @@ final class MainTabBarViewController: UITabBarController {
     setupView()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    configureTabBar()
+  }
+  
   // MARK: - Private visual components.
   private func setupView() {
-    configureTabBar()
     setupNavigationsToTabBar()
   }
   

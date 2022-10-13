@@ -96,6 +96,7 @@ extension SearchViewController {
     detailVC.nameProductLabel.text = Products.shared.products[tag].title
     detailVC.imageNames = Products.shared.products[tag].imageName
     detailVC.priceLabel.text = Products.shared.products[tag].price
+    detailVC.productUrl = Products.shared.products[tag].url
     navigationController?.pushViewController(detailVC, animated: true)
   }
 }

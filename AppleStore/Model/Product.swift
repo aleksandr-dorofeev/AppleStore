@@ -12,4 +12,5 @@ struct Product {
   let title: String
   let imageName: [String]
   let price: String
+  let url: String
 }

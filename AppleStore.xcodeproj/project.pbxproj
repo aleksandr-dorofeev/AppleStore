@@ -17,6 +17,16 @@
 		F829588928EF294600BA44E0 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829588828EF294600BA44E0 /* ForYouViewController.swift */; };
 		F829588B28EF295F00BA44E0 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829588A28EF295F00BA44E0 /* BasketViewController.swift */; };
 		F829588F28EF34DD00BA44E0 /* SearchViewController +Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F829588E28EF34DD00BA44E0 /* SearchViewController +Extension.swift */; };
+		F84BE19B28F53BF200AF6774 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE19A28F53BF200AF6774 /* WebViewController.swift */; };
+		F84BE1A428F5B15100AF6774 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1A328F5B15100AF6774 /* PDFViewController.swift */; };
+		F84BE1A728F5BC1700AF6774 /* Prices.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F84BE1A628F5BC1700AF6774 /* Prices.pdf */; };
+		F84BE1A928F5BC8200AF6774 /* WKNavigationDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1A828F5BC8200AF6774 /* WKNavigationDelegate+Extension.swift */; };
+		F84BE1AB28F5BCD000AF6774 /* WKUIDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1AA28F5BCD000AF6774 /* WKUIDelegate+Extension.swift */; };
+		F84BE1AD28F5ED3500AF6774 /* NavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1AC28F5ED3500AF6774 /* NavigationController+Extension.swift */; };
+		F84BE1AF28F61A1000AF6774 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1AE28F61A1000AF6774 /* ImageView+Extension.swift */; };
+		F84BE1B128F6AF6100AF6774 /* AvatarStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B028F6AF6100AF6774 /* AvatarStorage.swift */; };
+		F84BE1B328F6E33800AF6774 /* ForYouViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B228F6E33800AF6774 /* ForYouViewController+Extension.swift */; };
+		F84BE1B528F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B428F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift */; };
 		F8EAAD9928EF60AC008EADAC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAAD9828EF60AC008EADAC /* Product.swift */; };
 		F8EAAD9B28EF6329008EADAC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAAD9A28EF6329008EADAC /* View+Extension.swift */; };
 		F8EAAD9D28EF6B88008EADAC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAAD9C28EF6B88008EADAC /* DetailViewController.swift */; };
@@ -39,6 +49,16 @@
 		F829588828EF294600BA44E0 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		F829588A28EF295F00BA44E0 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		F829588E28EF34DD00BA44E0 /* SearchViewController +Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController +Extension.swift"; sourceTree = "<group>"; };
+		F84BE19A28F53BF200AF6774 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F84BE1A328F5B15100AF6774 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		F84BE1A628F5BC1700AF6774 /* Prices.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Prices.pdf; sourceTree = "<group>"; };
+		F84BE1A828F5BC8200AF6774 /* WKNavigationDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKNavigationDelegate+Extension.swift"; sourceTree = "<group>"; };
+		F84BE1AA28F5BCD000AF6774 /* WKUIDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKUIDelegate+Extension.swift"; sourceTree = "<group>"; };
+		F84BE1AC28F5ED3500AF6774 /* NavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Extension.swift"; sourceTree = "<group>"; };
+		F84BE1AE28F61A1000AF6774 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
+		F84BE1B028F6AF6100AF6774 /* AvatarStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStorage.swift; sourceTree = "<group>"; };
+		F84BE1B228F6E33800AF6774 /* ForYouViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForYouViewController+Extension.swift"; sourceTree = "<group>"; };
+		F84BE1B428F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerControllerDelegate+Extension.swift"; sourceTree = "<group>"; };
 		F8EAAD9828EF60AC008EADAC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		F8EAAD9A28EF6329008EADAC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		F8EAAD9C28EF6B88008EADAC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +100,7 @@
 			children = (
 				F829586E28EF10CF00BA44E0 /* AppDelegate.swift */,
 				F829587028EF10CF00BA44E0 /* SceneDelegate.swift */,
+				F84BE1A528F5BBFF00AF6774 /* PricePDF */,
 				F8EAAD9728EF609E008EADAC /* Model */,
 				F829588D28EF349C00BA44E0 /* Extensions */,
 				F829588C28EF296B00BA44E0 /* Builder */,
@@ -96,6 +117,8 @@
 			children = (
 				F829588428EF290300BA44E0 /* SearchViewController.swift */,
 				F8EAAD9C28EF6B88008EADAC /* DetailViewController.swift */,
+				F84BE19A28F53BF200AF6774 /* WebViewController.swift */,
+				F84BE1A328F5B15100AF6774 /* PDFViewController.swift */,
 				F829588628EF293700BA44E0 /* BuyViewController.swift */,
 				F829588828EF294600BA44E0 /* ForYouViewController.swift */,
 				F829588A28EF295F00BA44E0 /* BasketViewController.swift */,
@@ -119,8 +142,22 @@
 				F8FA4CEC28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift */,
 				F8FA4CEE28F42272000F6658 /* Collection+Extension.swift */,
 				F8EAAD9A28EF6329008EADAC /* View+Extension.swift */,
+				F84BE1A828F5BC8200AF6774 /* WKNavigationDelegate+Extension.swift */,
+				F84BE1AA28F5BCD000AF6774 /* WKUIDelegate+Extension.swift */,
+				F84BE1AC28F5ED3500AF6774 /* NavigationController+Extension.swift */,
+				F84BE1AE28F61A1000AF6774 /* ImageView+Extension.swift */,
+				F84BE1B228F6E33800AF6774 /* ForYouViewController+Extension.swift */,
+				F84BE1B428F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F84BE1A528F5BBFF00AF6774 /* PricePDF */ = {
+			isa = PBXGroup;
+			children = (
+				F84BE1A628F5BC1700AF6774 /* Prices.pdf */,
+			);
+			path = PricePDF;
 			sourceTree = "<group>";
 		};
 		F8EAAD9728EF609E008EADAC /* Model */ = {
@@ -128,6 +165,7 @@
 			children = (
 				F8EAAD9828EF60AC008EADAC /* Product.swift */,
 				F8EC6E8328F3524F00E5447B /* Products.swift */,
+				F84BE1B028F6AF6100AF6774 /* AvatarStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +231,7 @@
 			files = (
 				F829587B28EF10D100BA44E0 /* LaunchScreen.storyboard in Resources */,
 				F829587828EF10D100BA44E0 /* Assets.xcassets in Resources */,
+				F84BE1A728F5BC1700AF6774 /* Prices.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,19 +266,28 @@
 			files = (
 				F8FA4CED28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift in Sources */,
 				F8EAAD9D28EF6B88008EADAC /* DetailViewController.swift in Sources */,
+				F84BE1A928F5BC8200AF6774 /* WKNavigationDelegate+Extension.swift in Sources */,
 				F8EC6E7E28F1812200E5447B /* DetailViewController+Extension.swift in Sources */,
+				F84BE1B128F6AF6100AF6774 /* AvatarStorage.swift in Sources */,
 				F829587328EF10CF00BA44E0 /* MainTabBarViewController.swift in Sources */,
+				F84BE1B328F6E33800AF6774 /* ForYouViewController+Extension.swift in Sources */,
 				F8FA4CEF28F42272000F6658 /* Collection+Extension.swift in Sources */,
 				F829588728EF293700BA44E0 /* BuyViewController.swift in Sources */,
 				F8EAAD9B28EF6329008EADAC /* View+Extension.swift in Sources */,
 				F8EAAD9928EF60AC008EADAC /* Product.swift in Sources */,
+				F84BE1B528F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift in Sources */,
 				F829588B28EF295F00BA44E0 /* BasketViewController.swift in Sources */,
+				F84BE1A428F5B15100AF6774 /* PDFViewController.swift in Sources */,
 				F829588928EF294600BA44E0 /* ForYouViewController.swift in Sources */,
 				F829588F28EF34DD00BA44E0 /* SearchViewController +Extension.swift in Sources */,
+				F84BE1AB28F5BCD000AF6774 /* WKUIDelegate+Extension.swift in Sources */,
 				F829586F28EF10CF00BA44E0 /* AppDelegate.swift in Sources */,
 				F8EC6E8428F3524F00E5447B /* Products.swift in Sources */,
 				F829588528EF290300BA44E0 /* SearchViewController.swift in Sources */,
 				F829587128EF10CF00BA44E0 /* SceneDelegate.swift in Sources */,
+				F84BE19B28F53BF200AF6774 /* WebViewController.swift in Sources */,
+				F84BE1AF28F61A1000AF6774 /* ImageView+Extension.swift in Sources */,
+				F84BE1AD28F5ED3500AF6774 /* NavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
