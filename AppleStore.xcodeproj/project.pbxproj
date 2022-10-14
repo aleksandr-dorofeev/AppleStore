@@ -27,6 +27,11 @@
 		F84BE1B128F6AF6100AF6774 /* AvatarStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B028F6AF6100AF6774 /* AvatarStorage.swift */; };
 		F84BE1B328F6E33800AF6774 /* ForYouViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B228F6E33800AF6774 /* ForYouViewController+Extension.swift */; };
 		F84BE1B528F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B428F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift */; };
+		F84BE1B728F82CDC00AF6774 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE1B628F82CDB00AF6774 /* UserStorage.swift */; };
+		F84BE22028F8D04200AF6774 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE21F28F8D04200AF6774 /* OnboardingViewController.swift */; };
+		F84BE22628F8D0A300AF6774 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE22528F8D0A300AF6774 /* OnboardingPageViewController.swift */; };
+		F84BE22828F8D0ED00AF6774 /* Delegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE22728F8D0ED00AF6774 /* Delegate+Extension.swift */; };
+		F84BE22A28F8D11500AF6774 /* DataSource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BE22928F8D11500AF6774 /* DataSource+Extension.swift */; };
 		F8EAAD9928EF60AC008EADAC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAAD9828EF60AC008EADAC /* Product.swift */; };
 		F8EAAD9B28EF6329008EADAC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAAD9A28EF6329008EADAC /* View+Extension.swift */; };
 		F8EAAD9D28EF6B88008EADAC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EAAD9C28EF6B88008EADAC /* DetailViewController.swift */; };
@@ -59,6 +64,11 @@
 		F84BE1B028F6AF6100AF6774 /* AvatarStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStorage.swift; sourceTree = "<group>"; };
 		F84BE1B228F6E33800AF6774 /* ForYouViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForYouViewController+Extension.swift"; sourceTree = "<group>"; };
 		F84BE1B428F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerControllerDelegate+Extension.swift"; sourceTree = "<group>"; };
+		F84BE1B628F82CDB00AF6774 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		F84BE21F28F8D04200AF6774 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F84BE22528F8D0A300AF6774 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		F84BE22728F8D0ED00AF6774 /* Delegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Delegate+Extension.swift"; sourceTree = "<group>"; };
+		F84BE22928F8D11500AF6774 /* DataSource+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource+Extension.swift"; sourceTree = "<group>"; };
 		F8EAAD9828EF60AC008EADAC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		F8EAAD9A28EF6329008EADAC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		F8EAAD9C28EF6B88008EADAC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 			children = (
 				F829586E28EF10CF00BA44E0 /* AppDelegate.swift */,
 				F829587028EF10CF00BA44E0 /* SceneDelegate.swift */,
+				F84BE1B828F8411600AF6774 /* Onboarding */,
 				F84BE1A528F5BBFF00AF6774 /* PricePDF */,
 				F8EAAD9728EF609E008EADAC /* Model */,
 				F829588D28EF349C00BA44E0 /* Extensions */,
@@ -138,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				F829588E28EF34DD00BA44E0 /* SearchViewController +Extension.swift */,
+				F84BE22728F8D0ED00AF6774 /* Delegate+Extension.swift */,
+				F84BE22928F8D11500AF6774 /* DataSource+Extension.swift */,
 				F8EC6E7D28F1812200E5447B /* DetailViewController+Extension.swift */,
 				F8FA4CEC28F41BD2000F6658 /* NSMutableAttributedString+Extension.swift */,
 				F8FA4CEE28F42272000F6658 /* Collection+Extension.swift */,
@@ -160,12 +173,22 @@
 			path = PricePDF;
 			sourceTree = "<group>";
 		};
+		F84BE1B828F8411600AF6774 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F84BE21F28F8D04200AF6774 /* OnboardingViewController.swift */,
+				F84BE22528F8D0A300AF6774 /* OnboardingPageViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		F8EAAD9728EF609E008EADAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F8EAAD9828EF60AC008EADAC /* Product.swift */,
 				F8EC6E8328F3524F00E5447B /* Products.swift */,
 				F84BE1B028F6AF6100AF6774 /* AvatarStorage.swift */,
+				F84BE1B628F82CDB00AF6774 /* UserStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,9 +296,12 @@
 				F84BE1B328F6E33800AF6774 /* ForYouViewController+Extension.swift in Sources */,
 				F8FA4CEF28F42272000F6658 /* Collection+Extension.swift in Sources */,
 				F829588728EF293700BA44E0 /* BuyViewController.swift in Sources */,
+				F84BE1B728F82CDC00AF6774 /* UserStorage.swift in Sources */,
+				F84BE22828F8D0ED00AF6774 /* Delegate+Extension.swift in Sources */,
 				F8EAAD9B28EF6329008EADAC /* View+Extension.swift in Sources */,
 				F8EAAD9928EF60AC008EADAC /* Product.swift in Sources */,
 				F84BE1B528F6E3D400AF6774 /* UIImagePickerControllerDelegate+Extension.swift in Sources */,
+				F84BE22028F8D04200AF6774 /* OnboardingViewController.swift in Sources */,
 				F829588B28EF295F00BA44E0 /* BasketViewController.swift in Sources */,
 				F84BE1A428F5B15100AF6774 /* PDFViewController.swift in Sources */,
 				F829588928EF294600BA44E0 /* ForYouViewController.swift in Sources */,
@@ -283,10 +309,12 @@
 				F84BE1AB28F5BCD000AF6774 /* WKUIDelegate+Extension.swift in Sources */,
 				F829586F28EF10CF00BA44E0 /* AppDelegate.swift in Sources */,
 				F8EC6E8428F3524F00E5447B /* Products.swift in Sources */,
+				F84BE22A28F8D11500AF6774 /* DataSource+Extension.swift in Sources */,
 				F829588528EF290300BA44E0 /* SearchViewController.swift in Sources */,
 				F829587128EF10CF00BA44E0 /* SceneDelegate.swift in Sources */,
 				F84BE19B28F53BF200AF6774 /* WebViewController.swift in Sources */,
 				F84BE1AF28F61A1000AF6774 /* ImageView+Extension.swift in Sources */,
+				F84BE22628F8D0A300AF6774 /* OnboardingPageViewController.swift in Sources */,
 				F84BE1AD28F5ED3500AF6774 /* NavigationController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

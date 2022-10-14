@@ -18,7 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
     let window = UIWindow(windowScene: windowScene)
-    window.rootViewController = MainTabBarViewController()
+    if UserStorage.shared.verifyUser(forKey: Constants.isEntry) == false {
+      window.rootViewController = OnboardingPageViewController(transitionStyle: .scroll,
+                                                               navigationOrientation: .horizontal,
+                                                               options: nil)
+    } else {
+      window.rootViewController = MainTabBarViewController()
+    }
     self.window = window
     window.makeKeyAndVisible()
   }
