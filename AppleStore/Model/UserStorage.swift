@@ -9,7 +9,7 @@ import Foundation
 
 /// Global Constants.
 enum Constants {
-  static let inEntry = "firstEntry"
+  static let isEntry = "firstEntry"
 }
 
 /// Storage for save and verify first entry.

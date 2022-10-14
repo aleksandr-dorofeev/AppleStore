@@ -205,7 +205,7 @@ final class OnboardingPageViewController: UIPageViewController {
   private func goToNextPage(animated: Bool = true,
                             completion: ((Bool) -> Void)? = nil) {
     guard
-      let currentPage = viewControllers?[0],
+      let currentPage = viewControllers?.first,
       let nextPage = dataSource?.pageViewController(self,
                                                     viewControllerAfter: currentPage)
     else {

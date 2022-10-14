@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
     let window = UIWindow(windowScene: windowScene)
-    if UserStorage.shared.verifyUser(forKey: Constants.inEntry) == false {
+    if UserStorage.shared.verifyUser(forKey: Constants.isEntry) == false {
       window.rootViewController = OnboardingPageViewController(transitionStyle: .scroll,
                                                                navigationOrientation: .horizontal,
                                                                options: nil)
